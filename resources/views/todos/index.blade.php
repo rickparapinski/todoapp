@@ -17,6 +17,11 @@ Todo Index
                             {{ $todo->name }}
 
                             <a href="/todos/{{$todo->id}}"  class="btn btn-primary btn-sm float-right">View</a>
+                            @if(!$todo->completed)
+                <a href="/todos/{{$todo->id}}/complete" class="btn btn-info btn-sm mx-1 float-right">Mark as complete</a>
+                @else
+                <span class="badge badge-success ml-1">Completed</span>
+                @endif
                         </li>
                         @endforeach
                     </div>

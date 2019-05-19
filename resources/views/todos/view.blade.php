@@ -18,6 +18,11 @@
                 </div>
                 <a href="/todos/{{$todo->id}}/edit" class="btn btn-sm btn-info my-2">Edit</a>
                 <a href="/todos/{{$todo->id}}/delete" class="btn btn-sm  btn-danger">Delete</a>
+                @if(!$todo->completed)
+                <a href="/todos/{{$todo->id}}/complete" class="btn btn-info btn-sm">Mark as complete</a>
+                @else
+                <span class="badge badge-success">Completed</span>
+                @endif
                 
             </div>
 

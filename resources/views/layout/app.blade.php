@@ -35,6 +35,14 @@
 
     <div class="container">
 
+    @if(session()->has('success'))
+
+<div class="alert alert-success">
+{{session()->get('success')}}
+
+</div>
+    @endif
+
         @yield('content')
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
